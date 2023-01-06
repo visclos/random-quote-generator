@@ -6594,7 +6594,12 @@ function getRandomColor() {
   ];
 
   // Your code below
-
+  
+  var body = document.body;
+  body.style.backgroundColor =randomColor;
+  body.style.color =randomColor;
+  document.getElementById("new-quote").style .backgroundColor=randomColor; 
+ 
   // Your code above
 }
 
@@ -6603,7 +6608,9 @@ function getRandomQuote() {
     Math.floor(Math.random() * quotesData.length)
   ];
 
-  // Your code below
+  // Your code 
+  document.getElementById("text").textContent =randomQuote.text;
+  document.getElementById("author").textContent =randomQuote.author;
 
   // Your code above
 }
@@ -6611,3 +6618,11 @@ function getRandomQuote() {
 // Your code below
 
 // Your code above
+document.getElementById("new-quote").addEventListener("click",bonjour);
+function bonjour(){
+  console.log('test')
+  getRandomColor()
+  getRandomQuote()
+}
+// getRandomColor()
+// getRandomQuote()
